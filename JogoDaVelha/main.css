@@ -1,11 +1,22 @@
 body {
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     height: 100vh;
     width: 100vw;
-    margin: 0
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
 }
+
+header {
+    border: 1px solid red;
+    background-color: gray;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 
 main {
     border: 1px solid red;
@@ -15,6 +26,23 @@ main {
     height: 45vmin;
 
     button {
-        font-size: 40rm;
+        font-size: 10vh;
     }
+}
+
+footer {
+    margin-top: 20px;
+}
+#reset {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#reset:hover {
+    background-color: #ff6b81;
 }
