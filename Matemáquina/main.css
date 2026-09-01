@@ -1,0 +1,29 @@
+body,
+html {
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+}
+
+div.calc {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    width: 45vmin;
+    height: 55vmin;
+
+    input,
+    button {
+        font-size: 2rem;
+    }
+
+    input {
+        grid-column: -1 / 1;
+        text-align: right;
+    }
+    button.igual {
+        grid-column: -1 / 1;
+    }
+
+}
