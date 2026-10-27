@@ -1,5 +1,5 @@
 let rng = Math.round(Math.random() * 5);
-const inp = document.querySelector("#numero");
+const inp = document.querySelector("#number");
 const btn = document.querySelector("button");
 const err = document.querySelector(".erros");
 const acer = document.querySelector(".acertos");
