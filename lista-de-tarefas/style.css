@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(./rambo.png);
+    background-size: cover;
+}
+
+form, ul {
+    margin: 0 auto;
+    width: 500px;
+}
+
+form {
+    display: flex;
+    margin-bottom: .5rem;
+
+    input {
+        flex-grow: 1;
+    }
+}
+
+ul {
+    padding: 0;
+}
+
+ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul > :nth-child(odd) {
+    background-color: lightcoral;
+}
+
+ul > :nth-child(even) {
+    background-color: lightblue;
+}
