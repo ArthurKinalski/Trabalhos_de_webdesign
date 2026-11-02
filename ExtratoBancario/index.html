@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Controle Financeiro</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer type="module" src="script.js"></script>
+  </head>
+  <body>
+    <main class="app">
+      <section class="card">
+        <form class="form" id="form">
+          <div class="field">
+            <label for="desc">Descrição</label>
+            <input id="desc" type="text" placeholder="Descrição" />
+          </div>
+          <div class="field">
+            <label for="valor">Valor</label>
+            <input
+              id="valor"
+              type="number"
+              inputmode="decimal"
+              step="0.01"
+              min="0.01"
+              placeholder="0,00"
+            />
+          </div>
+          <div class="field">
+            <label for="tipo">Tipo</label>
+            <select id="tipo">
+              <option value="entrada">Entrada</option>
+              <option value="saida">Saída</option>
+            </select>
+          </div>
+          <button class="btn" type="submit">Adicionar</button>
+        </form>
+      </section>
+
+      <div class="columns">
+        <section class="card card-in">
+          <h2>Entradas</h2>
+          <ul id="list-in"></ul>
+        </section>
+        <section class="card card-out">
+          <h2>Saídas</h2>
+          <ul id="list-out"></ul>
+        </section>
+      </div>
+
+      <section class="card" id="balance">
+        <p>Saldo atual</p>
+        <strong id="saldo">R$ 0,00</strong>
+      </section>
+    </main>
+  </body>
+</html>

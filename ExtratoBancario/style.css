@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --fundo: #f5f8fb;
+  --card: #ffffff;
+  --borda: #e3e9f0;
+  --borda-campo: #6d7277;
+  --texto: #12204a;
+  --verde: #0f7a55;
+  --vermelho: #cf3a2e;
+  --verm-claro: #fde8e6;
+  --azul: #243158;
+}
+
+.app {
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+  padding: 24px 16px;
+}
+
+body {
+  background-color: var(--fundo);
+  font-family: system-ui, sans-serif;
+  color: var(--texto);
+}
+
+.card {
+  background-color: var(--card);
+  border-radius: 14px;
+  border: 1px solid var(--borda);
+  padding: 20px;
+}
+
+.form {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  align-items: end;
+
+  .field {
+    display: grid;
+    gap: 8px;
+
+    input,
+    select {
+      padding: 12px 14px;
+      border: 1px solid var(--borda-campo);
+      border-radius: 8px;
+      font: inherit;
+      width: 100%;
+    }
+  }
+  button {
+    background-color: var(--azul);
+    color: white;
+    font: inherit;
+    font-weight: bold;
+    border: 0;
+    border-radius: 8px;
+    padding: 12px 24px;
+    cursor: pointer;
+  }
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  .card-in {
+    h2 {
+      border-left-color: var(--verde);
+    }
+    .valor {
+      color: var(--verde);
+      font-weight: bold;
+    }
+  }
+  .card-out {
+    h2 {
+      border-left-color: var(--vermelho);
+    }
+    .valor {
+      color: var(--vermelho);
+      font-weight: bold;
+    }
+  }
+}
+.columns h2 {
+  border-left: 5px solid;
+  padding-left: 20px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid var(--borda);
+    padding: 12px 0;
+
+    button {
+      width: 32px;
+      height: 32px;
+      border: 0;
+      border-radius: 8px;
+      cursor: pointer;
+      background-color: var(--verm-claro);
+      color: var(--vermelho);
+      font: inherit;
+      font-weight: bold;
+    }
+  }
+
+  .desc {
+    flex: 1;
+  }
+}
+
+#balance p {
+  font-weight: bold;
+}
+#saldo {
+  font-size: 2rem;
+  color: var(--verde);
+}
