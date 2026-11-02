@@ -7,6 +7,14 @@ const listOut = document.querySelector("#list-out");
 const colunas = document.querySelector(".columns");
 const saldoEl = document.querySelector("#saldo");
 
+function formatar(n) {
+  const moeda = n.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  });
+  return moeda;
+}
+
 function somar(lista) {
   let total = 0;
   lista.querySelectorAll("li").forEach((li) => {
@@ -17,10 +25,7 @@ function somar(lista) {
 
 function atualizarSaldo() {
   const saldo = somar(listIn) - somar(listOut);
-  saldoEl.textContent = saldo.toLocaleString("pt-BR", {
-    style: "currency",
-    currency: "BRL",
-  });
+  saldoEl.textContent = formatar(saldo);
   saldoEl.style.color = saldo < 0 ? "var(--vermelho)" : "var(--verde)";
 }
 
@@ -39,7 +44,7 @@ form.addEventListener("submit", (ev) => {
   li.innerHTML = `
         <button>-</button>
         <span class="desc"></span>
-        <span class="valor">${numero}</span>
+        <span class="valor">${formatar(numero)}</span>
     `;
 
   li.querySelector(".desc").textContent = descricao;
