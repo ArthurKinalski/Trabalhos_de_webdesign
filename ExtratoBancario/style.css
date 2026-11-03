@@ -23,9 +23,9 @@
 }
 
 body {
-  background-color: var(--fundo);
   font-family: system-ui, sans-serif;
-  color: var(--texto);
+  background-image: url(./goku.png);
+  background-size: cover;
 }
 
 .card {
