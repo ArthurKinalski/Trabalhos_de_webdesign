@@ -42,7 +42,7 @@ form.addEventListener("submit", (ev) => {
   const li = document.createElement("li");
   li.dataset.valor = numero;
   li.innerHTML = `
-        <button>-</button>
+        <button>−</button>
         <span class="desc"></span>
         <span class="valor">${formatar(numero)}</span>
     `;
