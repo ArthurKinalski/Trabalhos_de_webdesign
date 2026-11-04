@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(./rambo.png);
+  background-size: cover;
+}
+
+.tempo {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.inp,
+.act {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 1rem;
+}
+
+.inp {
+  width: 180px;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.act {
+  background: #38bdf8;
+  color: white;
+  cursor: pointer;
+}
+
+.lst {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 220px;
+}
+
+.lst li {
+  background: rgba(255, 0, 0, 0.338);
+  border: 1px solid rgb(255, 0, 0);
+  color: white;
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin-top: 8px;
+  text-align: center;
+}
